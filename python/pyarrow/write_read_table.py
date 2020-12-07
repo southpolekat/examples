@@ -12,7 +12,7 @@ table = pa.Table.from_pandas(df)
 
 import pyarrow.parquet as pq
 
-pq.write_table(table, '/tmp/test.parquet')  
+pq.write_table(table, '/tmp/test.parquet', compression=None)  
 
 table2=pq.read_table('/tmp/test.parquet')
 
